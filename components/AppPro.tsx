@@ -27,9 +27,9 @@ function AppPro(): JSX.Element{
           {/* <Text style={isDarkMode ? styles.whiteText : styles.whiteText}> */}
           s
         </Text>
-        <Button
+        <Button 
           onPress={() => {
-            console.log('You tapped the button!');
+            console.log('You tapped the button halo!');
           }}
           title="Press Me"
         />
@@ -51,6 +51,9 @@ const styles = StyleSheet.create({
     },
     com:{
       color:'#f44324'
+    },
+    hitma:{
+      color: '#372623'
     }
 
 });

@@ -1,25 +1,29 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, ScrollView} from 'react-native';
 
 export default function FlatCards() {
   return (
     <View>
       <Text style={styles.headingText}>FlatCards</Text>
-      <View style={styles.container}>
-        <View style={[styles.card, styles.cardOne]}>
-          <Text style={styles.content}>Red</Text>
+      <ScrollView horizontal={true}>
+        <View style={styles.container}>
+          <View style={[styles.card, styles.cardOne]}>
+            <Text style={styles.content}>Red</Text>
+          </View>
+          <View style={[styles.card, styles.cardTwo]}>
+            <Text style={styles.content}>Blue</Text>
+          </View>
+          <View style={[styles.card, styles.cardThree]}>
+            <Text style={styles.content}>Yellow</Text>
+          </View>
+          <View style={[styles.card, styles.cardThree]}>
+            <Text style={styles.content}>Yellow</Text>
+          </View>
+          <View style={[styles.card, styles.cardThree]}>
+            <Text style={styles.content}>Yellow</Text>
+          </View>
         </View>
-        <View style={[styles.card, styles.cardTwo]}>
-          <Text style={styles.content}>Blue</Text>
-        </View>
-        <View style={[styles.card, styles.cardThree]}>
-          <Text style={styles.content}>Yellow</Text>
-        </View>
-        <View style={[styles.card, styles.cardThree]}>
-          <Text style={styles.content}>Yellow</Text>
-        </View>
-        
-      </View>
+      </ScrollView>
     </View>
   );
 }

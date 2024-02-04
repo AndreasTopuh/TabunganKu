@@ -1,32 +1,32 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import React from 'react';
 
 export default function ElevatedCards() {
   return (
     <View>
-      <Text style={styles.headingText}>Instagram</Text>
+      <Text style={styles.headingText}>Elevated Card</Text>
       <ScrollView horizontal={true} style={styles.container}>
         <View style={[styles.card, styles.cardElevated]}>
-            <Text style={styles.content}>Tap</Text>
+          <Text style={styles.content}>Tap</Text>
         </View>
         <View style={[styles.card, styles.cardElevated]}>
-            <Text style={styles.content}>Me</Text>
+          <Text style={styles.content}>Me</Text>
         </View>
         <View style={[styles.card, styles.cardElevated]}>
-            <Text style={styles.content}>To</Text>
+          <Text style={styles.content}>To</Text>
         </View>
         <View style={[styles.card, styles.cardElevated]}>
-            <Text style={styles.content}>Scroll</Text>
+          <Text style={styles.content}>Scroll</Text>
         </View>
         <View style={[styles.card, styles.cardElevated]}>
-            <Text style={styles.content}>more...</Text>
+          <Text style={styles.content}>more...</Text>
         </View>
         <View style={[styles.card, styles.cardElevated]}>
-            <Text style={styles.content}>heheh</Text>
+          <Text style={styles.content}>heheh</Text>
         </View>
       </ScrollView>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -44,13 +44,12 @@ const styles = StyleSheet.create({
   },
   card: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
-    width: 70,
-    height: 70,
+    alignItems: 'center',
+    height: 100,
+    width: 100,
+    borderRadius: 4,
     margin: 8,
-    borderRadius: 50,
-    
   },
   cardElevated: {
     backgroundColor: 'black',

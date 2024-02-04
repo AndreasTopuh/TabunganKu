@@ -15,7 +15,7 @@ function AppPro(): JSX.Element{
 
     return (
       <View style={styles.container}>
-        <Text style={isDarkMode ? styles.darkText : styles.darkText}>
+        <Text style={isDarkMode ? styles.whiteText : styles.darkText}>
           {/* <Text style={isDarkMode ? styles.whiteText : styles.whiteText}> */}
           Hello World
         </Text>

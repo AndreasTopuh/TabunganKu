@@ -13,16 +13,18 @@ import FlatCards from './components/FlatCards';
 import ElevatedCards from './components/ElevatedCards';
 import FancyCard from './components/FancyCard';
 import AppPro from './components/AppPro';
-import Tugas1 from './components/Tugas1';
+import Tugas1 from './components/App';
 import FooterBar from './components/FooterBar';
+import SignInPage from './components/excercise#3';
 // import Home from './components/Home'
 
 function App() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
+        <SignInPage/>
 
-        {/* <Home/> */}
+        {/* <Home/>
         <Text style={{
           fontSize: 29,
           textAlign: 'center',
@@ -33,18 +35,18 @@ function App() {
           // color: 'white', // BEGIN: Added color property
         }}>
           Welcome Friend
-        </Text>
-        <TextInput
+        </Text> */}
+        {/* <TextInput
           style={styles.search}
           placeholder="Cari Gereja"
           placeholderTextColor={'#A4B0BD'}
-        />
+        /> */}
         {/* <FlatCards /> */}
         {/* <ElevatedCards /> */}
         {/* <AppPro /> */}
-        <Tugas1 />
-        <FancyCard />
-        <FooterBar />
+        {/* <Tugas1 /> */}
+        {/* <FancyCard /> */}
+        {/* <FooterBar /> */}
 
       </ScrollView>
     </SafeAreaView>

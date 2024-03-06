@@ -1,25 +1,13 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
+import Router from './src/router/';
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Tabungan Ku</Text>
-    </View>
+    <NavigationContainer>
+      <Router />
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#02CF8E',
-  },
-  text: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    fontFamily: 'Poppins',
-    color: 'black',
-  },
-});
+export default App;

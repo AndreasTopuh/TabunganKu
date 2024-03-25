@@ -2,10 +2,10 @@ import {StyleSheet, View, ScrollView} from 'react-native';
 import React from 'react';
 import {Button, Gap, PageHeader, TextInput} from '../../components';
 
-const SignIn = ({navigation}) => {
+const HomePage = ({navigation}) => {
   return (
     <ScrollView style={styles.container}>
-      <PageHeader label="Sign In" backButton={false} />
+      <PageHeader type='withPhoto' />
       <Gap height={24} />
       <View style={styles.contentWrapper}>
         <Gap height={26} />
@@ -16,10 +16,9 @@ const SignIn = ({navigation}) => {
         <Gap height={16} />
         <TextInput label="Password" placeholder="Type your password" />
         <Gap height={24} />
-        <Button 
-          label="Sign In" 
-           onPress={() => navigation.navigate('HomePage')}
-
+        <Button
+          label="Sign In"
+          onPress={() => navigation.navigate('HomePage')}
         />
         <Gap height={12} />
         <Button
@@ -33,7 +32,7 @@ const SignIn = ({navigation}) => {
   );
 };
 
-export default SignIn;
+export default HomePage;
 
 const styles = StyleSheet.create({
   container: {

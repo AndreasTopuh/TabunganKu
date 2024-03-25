@@ -1,19 +1,24 @@
-import {
-  StyleSheet,
-  Text,
-  Touchable,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {BackButton} from '../../../assets/icon';
+import {Button} from '../../atoms';
 
-const PageHeader = ({label, backButton, navigation, nav}) => {
+const PageHeader = ({label, backButton, onPress, type}) => {
+  if (type === 'withPhoto') {
+    return (
+      <View style={styles.container}>
+        {/* <Text style={styles.text}>PageHeader withPhoto</Text> */}
+        {/* <Text>PageHeader withPhoto</Text> */}
+        <Text style={styles.label1}>TabunganKu</Text>
+        <Text style={styles.label2}>Track your money</Text>
+        
+      </View>
+    );
+  }
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => backButton && navigation.navigate(nav)}>
-        {backButton && <BackButton style={styles.backButton} />}
-      </TouchableOpacity>
+      {backButton && (
+        <Button type="icon-only" icon="icon-back" onPress={onPress} />
+      )}
       <Text style={styles.label}>{label}</Text>
     </View>
   );
@@ -33,8 +38,21 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Medium',
     fontSize: 22,
     color: '#020202',
+    marginLeft: 26,
   },
-  backButton: {
-    marginRight: 24,
+  label1: {
+    fontFamily: 'Poppins-Medium',
+    fontSize: 22,
+    color: '#020202',
+    marginLeft: 26,
+  },
+  label2: {
+    fontFamily: 'Poppins-Medium',
+    fontSize: 22,
+    color: 'grey',
+    marginLeft: 26,
+  },
+  text: {
+    color: '#020202',
   },
 });

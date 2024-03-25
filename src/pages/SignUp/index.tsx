@@ -1,48 +1,50 @@
+import {
+  StyleSheet,
+  View,
+  ScrollView,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 import React from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
-import {Button, Gap, PageHeader, TextInput, ImagePicker} from '../../components';
-// import {BackButton, Profile} from '../../assets/icon';
-import { useNavigation } from '@react-navigation/native';
-const SignUp = () => {
-  const navigation = useNavigation();
+import {Button, Gap, PageHeader, TextInput} from '../../components';
+
+const SignUp = ({navigation}) => {
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.header}>
-
-        {/* <BackButton/> */}
-        <PageHeader label="Sign Up" backButton={true} navigation={navigation} nav="SignIn"/>
-      </View>
-
+      <PageHeader
+        label="Sign Up"
+        backButton={true}
+        onPress={() => navigation.goBack()}
+      />
       <Gap height={24} />
 
       <View style={styles.contentWrapper}>
-        <Gap height={26} />
-        <View style={styles.center}>
-          <ImagePicker />
-          <Gap height={16} />
-          {/* <Profile /> */}
+        
+        <View style={styles.profileContainer}>
+          <View style={styles.profile}>
+            <View style={styles.addPhoto}>
+              <TouchableOpacity>
+                <Text style={styles.addPhotoLabel}>Add Photo</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
 
-        <Gap height={16} />
 
+        <Gap height={26} />
         <TextInput label="Full Name" placeholder="Type your full name" />
-
         <Gap height={16} />
-
         <TextInput
           label="Email Address"
           placeholder="Type your email address"
         />
-
-        <Gap height={24} />
-
+        <Gap height={16} />
         <TextInput label="Password" placeholder="Type your password" />
-
         <Gap height={24} />
-
-        <Button label="Continue" />
-
-        <Gap height={12} />
+        <Button
+          label="Continue"
+          onPress={() => navigation.navigate('SignIn')}
+        />
       </View>
     </ScrollView>
   );
@@ -53,26 +55,40 @@ export default SignUp;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: 'red',
   },
   contentWrapper: {
     backgroundColor: '#FFFFFF',
     flex: 1,
     paddingHorizontal: 24,
-    // justifyContent: 'center',
-    // paddingBottom: 40,
   },
-  header: {
+  profileContainer: {
+    marginTop: 26,
+    alignItems: 'center',
+  },
+  profile: {
     backgroundColor: '#FFFFFF',
-    flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 24,
+    justifyContent: 'center',
+    height: 160,
+    width: 160,
+    borderRadius: 160 / 2,
+    borderWidth: 1,
+    borderColor: '#8D92A3',
+    borderStyle: 'dashed',
   },
-  center: {
+  addPhoto: {
+    backgroundColor: '#F0F0F0',
+    width: 140,
+    height: 140,
+    borderRadius: 140 / 2,
+    justifyContent: 'center',
     alignItems: 'center',
-
-    // width: 300,
-    // width: 110,
-    // height: 110,
+  },
+  addPhotoLabel: {
+    fontFamily: 'Poppins-Light',
+    fontSize: 14,
+    width: 40,
+    textAlign: 'center',
+    color: '#8D92A3',
   },
 });

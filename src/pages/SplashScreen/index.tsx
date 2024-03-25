@@ -10,7 +10,7 @@ const SplashScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Logo />
-      <Text style={styles.text}>Money Tracker</Text>
+      <Text style={styles.text}>TabunganKu</Text>
     </View>
   );
 };

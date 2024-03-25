@@ -1,6 +1,6 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import Router from './src/router/';
+import Router from './src/router';
 
 const App = () => {
   return (

@@ -1,5 +1,6 @@
 import Logo from './Logo.svg';
 import BackButton from './BackButton.svg';
-import Profile from './Profile.svg';
+import Profile from './photo.svg';
+// import type { ProfileType } from './photo.svg';
 
-export { Logo, BackButton , Profile};
+export { Logo, BackButton ,Profile};

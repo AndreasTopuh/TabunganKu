@@ -2,11 +2,10 @@ import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import {Button, Gap, PageHeader, TextInput} from '../../components';
 
-
 const SignIn = ({navigation}) => {
   return (
     <ScrollView style={styles.container}>
-      <PageHeader label="Sign In" />
+      <PageHeader label="Sign In" backButton={false} />
       <Gap height={24} />
       <View style={styles.contentWrapper}>
         <Gap height={24} />
@@ -20,10 +19,10 @@ const SignIn = ({navigation}) => {
         <Button label="Sign In" />
         <Gap height={12} />
         <Button
-          label="Create New Account"
+          label="Add New Account"
           backgroundColor="#8D92A3"
           textColor="#FFFFFF"
-          onPress={() => navigation.navigate('SignUp')}
+          onSubmit={() => navigation.navigate('SignUp')}
         />
       </View>
     </ScrollView>

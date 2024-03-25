@@ -5,7 +5,7 @@ import {Button} from '../../atoms';
 const PageHeader = ({label, backButton, onPress, type}) => {
   if (type === 'withPhoto') {
     return (
-      <View style={styles.container}>
+      <View style={styles.containerwithPhoto}>
         {/* <Text style={styles.text}>PageHeader withPhoto</Text> */}
         {/* <Text>PageHeader withPhoto</Text> */}
         <Text style={styles.label1}>TabunganKu</Text>
@@ -33,6 +33,13 @@ const styles = StyleSheet.create({
     paddingVertical: 37,
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  containerwithPhoto: {
+    backgroundColor: '#FFFFFF',
+    // paddingLeft: 24,
+    paddingVertical: 37,
+    flexDirection: 'column', // Mengubah tata letak menjadi kolom
+    // alignItems: 'center', // Mengatur posisi teks ke tengah
   },
   label: {
     fontFamily: 'Poppins-Medium',

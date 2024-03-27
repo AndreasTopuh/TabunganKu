@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
   },
   addPhotoLabel: {
     fontFamily: 'Poppins-Light',
-    fontSize: 14,
+    fontSize: 12,
     width: 40,
     textAlign: 'center',
     color: '#8D92A3',

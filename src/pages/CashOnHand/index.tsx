@@ -60,7 +60,7 @@ const CashOnHand = ({navigation}) => {
         <Button label="Save" onPress={() => navigation.navigate('Home')} />
         <Gap height={80} />
         <Text style={styles.titletransaction}>Last 3 Transactions</Text>
-        <Gap height={24} />
+        <Gap height={30} />
 
         <ScrollView>
           {lastTransactions.map((transaction, index) => (

@@ -84,12 +84,13 @@ const CashOnBank = ({navigation}) => {
         <Gap height={80} />
 
         <Text style={styles.titletransaction}>Last 3 Transactions</Text>
+        <Gap height={30} />
 
-        <Gap height={16} />
+        {/* <Gap height={16} /> */}
         <ScrollView>
           {lastTransactions.map((transaction, index) => (
             <Transaction
-            //   style={styles.shadowProp}
+              //   style={styles.shadowProp}
               key={index}
               date={transaction.date}
               description={transaction.description}

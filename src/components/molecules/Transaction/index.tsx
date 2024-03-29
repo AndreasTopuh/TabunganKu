@@ -29,19 +29,50 @@ export default Transaction;
 
 const styles = StyleSheet.create({
   border: {
-    backgroundColor: 'red',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    padding: 20,
-    height: 85,
+    // padding: 15,
+    // height: 80,
+    // marginHorizontal: 20,
+    // marginTop: 35,
+    // marginBottom: -40,
+    padding: 15,
+    height: 80,
     marginTop: 35,
     marginBottom: -40,
-    borderRadius: 10,
+    marginHorizontal: 5,
+    borderRadius: 7,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 9,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
+
+  //   border: {
+  //     backgroundColor: 'white',
+  //     alignItems: 'center',
+  //     justifyContent: 'space-between',
+  //     flexDirection: 'row',
+  //     padding: 20,
+  //     height: 85,
+  //     marginTop: 35,
+  //     marginBottom: -40,
+  //     borderRadius: 10,
+
+  //     elevation: 3, // untuk Android
+  //     shadowColor: '#000',
+  //     shadowOffset: {width: 2, height: 2},
+  //     shadowOpacity: 5,
+  //     shadowRadius: 5,
+  //   },
   transactionItem: {
-    marginBottom: 20,
-    // flexGrow: 1,
+    marginBottom: 15,
   },
   transactionDate: {
     fontSize: 14,

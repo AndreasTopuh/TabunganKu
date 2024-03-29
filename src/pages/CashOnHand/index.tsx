@@ -43,7 +43,8 @@ const CashOnHand = ({navigation}) => {
   ];
 
   return (
-    <ScrollView style={styles.container}>
+    // <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <PageHeader
         label="CashOnHand"
         backButton={true}
@@ -59,17 +60,20 @@ const CashOnHand = ({navigation}) => {
         <Button label="Save" onPress={() => navigation.navigate('Home')} />
         <Gap height={80} />
         <Text style={styles.titletransaction}>Last 3 Transactions</Text>
+        <Gap height={24} />
 
-        {lastTransactions.map((transaction, index) => (
-          <Transaction
-            key={index}
-            date={transaction.date}
-            description={transaction.description}
-            amount={transaction.amount}
-          />
-        ))}
+        <ScrollView>
+          {lastTransactions.map((transaction, index) => (
+            <Transaction
+              key={index}
+              date={transaction.date}
+              description={transaction.description}
+              amount={transaction.amount}
+            />
+          ))}
+        </ScrollView>
       </View>
-    </ScrollView>
+    </View>
   );
 };
 

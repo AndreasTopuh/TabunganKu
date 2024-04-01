@@ -1,25 +1,38 @@
+import React, {useState} from 'react';
 import {
+  ScrollView,
   StyleSheet,
   View,
-  ScrollView,
-  TouchableOpacity,
   Text,
+  TouchableOpacity,
+  // secureTextEntry,
 } from 'react-native';
-import React from 'react';
 import {Button, Gap, PageHeader, TextInput} from '../../components';
 
 const SignUp = ({navigation}) => {
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSingUp = () => {
+    console.log('Full Name:', fullName);
+    console.log('Email:', email);
+    console.log('Password:', password);
+
+    // navigation.navigate('SignIn');
+    // navigation.navigate('Register');
+  };
+
   return (
     <ScrollView style={styles.container}>
       <PageHeader
         label="Sign Up"
         backButton={true}
         onPress={() => navigation.goBack()}
+        type="default" // Add the 'type' prop with a default value
       />
       <Gap height={24} />
-
       <View style={styles.contentWrapper}>
-        
         <View style={styles.profileContainer}>
           <View style={styles.profile}>
             <View style={styles.addPhoto}>
@@ -29,22 +42,33 @@ const SignUp = ({navigation}) => {
             </View>
           </View>
         </View>
-
-
         <Gap height={26} />
-        <TextInput label="Full Name" placeholder="Type your full name" />
-        <Gap height={16} />
+        {/* Your existing code */}
         <TextInput
-          label="Email Address"
-          placeholder="Type your email address"
+          label="Full Name"
+          placeholder="Type your full name"
+          value={fullName}
+          onChangeText={setFullName}
         />
         <Gap height={16} />
-        <TextInput label="Password" placeholder="Type your password" />
-        <Gap height={24} />
-        <Button
-          label="Continue"
-          onPress={() => navigation.navigate('SignIn')}
+        {/* Your existing code */}
+        <TextInput
+          label="Email"
+          placeholder="Type your email address"
+          value={email}
+          onChangeText={setEmail}
         />
+        <Gap height={16} />
+        {/* Your existing code */}
+        <TextInput
+          label="Password"
+          placeholder="Type your password"
+          value={password}
+          onChangeText={setPassword}
+          secureTextEntry={true}
+        />
+        <Gap height={24} />
+        <Button label="Continue" onPress={handleSingUp} />
       </View>
     </ScrollView>
   );
